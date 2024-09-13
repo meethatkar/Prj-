@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+#main{
+    width:100%;
+    min-height:100vh;           /*vh is view height (used to make it responsive) [now main's child can't give height in %(percent) */
+}
+#upper{
+    background-image: url(https://img.freepik.com/free-photo/wet-monstera-deliciosa-plant-leaves-garden_53876-139814.jpg);
+    min-width:100vw;
+    min-height:60vh;
+    background-position: center;          /* show the center part of the image*/
+    background-size: cover;             /*roughly aligns/match bg image with our ascept ratio of screen*/
+}
+#overlay{
+    position:relative;          /* the position of this div's child will be releated to this class*/
+    min-width:inherit;             /* to cover whole upper div (as need to apply bg color on it*/
+    /*min-width: is used for minimum width jiska value is in vw, jho ki inherit ho rha hai from it's parent
+    so parent ka jho vw hoga vho hi overlay ka hoga 
+    SAME FOR MIN0HEIGHT:VH*/
+    min-height:inherit;                 /* to cover whole upper div (as need to apply bg color on it*/
+    background-color: rgba(240, 248, 255, 0.169);           /* for changing it's opacity click on color, u'll get color picke rthere you have option*/
+}
+#lower{
+    display:flex;   /* aligns items in horizontal direction*/
+    position: relative;         /* the child element's position will be releated to this lower div*/
+    background-color: hotpink;
+    min-height:40vh;
+    min-width:100vw;        /* vw is view width (used for making responsive*/
+
+}
+#lone{
+    min-width:25vw;          /* cause 100% div (parent) will be divied in 4 sub divs that's why 25*/
+    min-height: 20vh;
+    background-color: rgb(255, 255, 255);
+    padding:30px;       /* will make the text inside a little bit (remove and see difference)*/
+}
+#lone p{
+    margin-top: 20px;
+}
+#lone h3{
+    font-weight: 600;
+}
+#ltwo{
+    min-width:25vw;          /* cause 100% div (parent) will be divied in 4 sub divs that's why 25*/
+    min-height: 30vh;
+    background-image: url(https://wallpapers.com/images/hd/red-aesthetic-anime-laptop-ih52nt9o6gzll460.jpg);
+    background-size: cover;         /* makes image suitable as per element size*/           
+    background-position: 50% 65%;           /* makes position of bg 50% from height adn 65% as width*/
+}
+#lthree{
+    position: relative;
+    min-width:23vw;          /* cause 100% div (parent) will be divied in 4 sub divs that's why 25*/
+    min-height: inherit;
+    background-color: white;
+}
+#lfour{
+    min-width:27vw;         /* cause 100% div (parent) will be divied in 4 sub divs that's why 25*/
+    min-height: inherit;
+    background-color: grey;
+    color: white;
+    padding: 20px;          /* space inside the div (goto page and inspect for daigram*/
+}
+.cone{
+    margin-top: 7px;
+    display: flex;
+    width: 80%;
+    font-size: 15px;
+    font-style: italic;
+}
+.cone #photo{
+    margin-right: 10px;         /*space abve the div */
+    margin-top: 5px;
+    width:40px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+}
+#lthreea{
+    background-color: rgba(136, 88, 136, 0.822);
+    width:100%;
+    height: 30%;
+    padding:15px;
+}
+#lthreea p{
+    font-size: 15px;
+    margin-top: 5px;
+}
+#lthreeb{
+    position:absolute;
+    background-image:url(https://www.w3schools.com/css/img_forest.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    width: 100%;
+    height: 70%;
+}
+#text{
+    align-items: center;                /* makes all inside elemnts in center rescpective of height*/
+    justify-content: space-between;             /*this will make spaces around (360)each <p> tag*/
+    position: absolute;         /* position absloute means it will float, and appear above it's parent div*/
+    display: flex;          /* to make the textright div horizontal (side by side)*/
+    color:white;
+    width:100%;
+    padding: 0 10vw;        /*vw=veiw width (it will adjust the width according to the screen [mobile 20vw is different and monitor's 20 vm is different*/
+    /* in  padding 0 is for height top,bottom & 10vw is for width left,right */
+    /* height: 20%; by removing height it will by default take the height of it's text */
+    bottom:20%;         /* bottom se 20% up jayega*/
+}
+#text h1{           /* this id will target h1 element of text id*/
+    font-size:4vw;          /* will adjust font-size rescpetive of screen size (try miniziming and maximizing screen) MAKES RESPONSIVE*/
+    font-weight: 100;               /* makes h1 less m=bold (lighter) try removing it and see result*/
+}
+#textright{
+    width:60%;          /* to move element on right side (overall width is 60%, so can't go toward Noise text)*/
+    display:flex;           /*this will  make p tags side by side horizontally*/
+    justify-content: space-between;             /*this will make spaces around (360)each <p> tag*/
+    align-items: center;             /* makes all inside elemnts in center rescpective of height*/
+}
+#textright p{
+    font-size:15px;
+    width:40%;
+}
+
+
+/* MAIN PART FOR MAKING THE SITE RESPONSIVE */
+@media(max-width:500px){        /* here we are targeting all those device jiske width can go upto 500px*/
+    /* TOP SECTION */
+    #overlay #text{         /* targeting text div of overlay div*/
+        flex-direction: column;            /* making direction of arranging element as column*/
+        align-items: flex-start;            /*aligns elements to left side*/
+    }
+
+    #overlay #text #textright{          /* targeting textright div (parent-text[parent-overlay])*/
+         flex-direction: column;            
+         align-items: start;            /* aligns all inside items to left side*/
+    }
+    #overlay #text #textright p{          
+        width: initial;         /* hover over initial for detail*/
+        margin-top: 20px;
+    }
+    #overlay #text #textright #icon{
+        margin-top: 30px;
+    }
+    #overlay #text h1{
+        font-size: 10vw;
+    }
+
+    /* BOTTOM SECTION */
+    #lower{
+        flex-direction: column;
+    
+    }
+    #lone{
+        width:100%;
+
+    }
+    #ltwo{
+        width:100%;
+        
+    }
+    #lthree{
+        width:100%;
+    }
+    #lfour{
+        width:100%;
+        
+    }
+    #lthreea{
+
+    }
+    #lthreeb{
+
+    }
+}
