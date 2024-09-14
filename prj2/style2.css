@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    font-family: 'Gilroy';
+    box-sizing: border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+/* the above code is css boilerplate */
+#main{
+    display: flex;          /* make inside elements align horizontally */
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+#left{
+    position: relative;
+    height:100%;
+    width: 37%;
+    background-color: rgb(255, 255, 255);
+}
+#lnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;         /* vertical then horizontal */
+}
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+#lnavr a{
+    font-size: 15px;
+    margin-right: 20px;
+    text-decoration: none;          /* Removes underline */
+    color: black;
+}
+#lnavr i{
+    color: skyblue;
+}
+#left #text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+/* the above code is used to make text in the center of div left */
+#text h1{
+    font-size: 80px;
+    font-weight: 600;
+}
+#text p{
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.484);
+}
+#text a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    opacity: .6;
+    font-size: 16px;
+}
+#right{
+    height: 100%;
+    width: 63%;
+    background-color: rgb(227, 125, 125);
+}
+#rtop{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: violet;
+}
+#rtopleft{
+    width: 50%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1557800636-894a64c1696f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;         /* adjust the bg as per the div's height and width */
+}
+#rtopright{
+    width: 50%;
+    height: 100%;
+    background-image: url(https://i2.pickpik.com/photos/746/59/733/orange-falling-water-splash-e9e81ffb311f5dc8c93ac47898b9b989.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#rbottom{
+    height: 50%;
+    width: 100%;
+    background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_m4VIol5nCxpEuKAeknXR1FyvrxuPtGKG7Njqv7cR4ngVU=s900-c-k-c0x00ffffff-no-rj);
+    background-position: center;
+    background-size: cover;
+}
