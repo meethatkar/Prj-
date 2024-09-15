@@ -1,0 +1,140 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav-div{
+    position: absolute;
+    z-index: 109;
+    display: flex;
+    align-items: center;
+    white-space: NOWRAP;
+    padding: 5px;
+}
+#nav-div h1{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative; 
+    display: flex;              /* applying this changes to display is possible */
+    justify-content: center;           /* aligns items veritcally*/
+    align-items: center;        /*aligns items horizontally*/
+}
+#main img{
+    position: relative;
+    height: 590px;
+    z-index:99;         /* make img appears on top and text goes behind the image*/
+}
+#text{
+    top:13%;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 28px;
+    width: 50%;
+    text-align: center;     /* make alignment of text center */
+    z-index: 101;
+}
+#scroll-div::-webkit-scrollbar{
+    display: none;          /* this whole block of code will remove any scroll bars in this div*/
+}
+#scroll-div{
+    position: absolute;     /* it'll float (can move anywhere*/
+    top:23%;
+    width:100%;
+    white-space: nowrap;        /*   THIS MAKES THEIR CHILD (MORE H1) BELOW THE H1 (IN VERTICAL LINE)*/
+    overflow-x:auto;        /* IT MEANS IF THE ELEMENT MOVES OUTSIDE THE PARENT'S DIV THE MAKE IT AUTO */
+    overflow-y: hidden;       /* THIS MEANS IF THE ELEMENT MOVES(OVERFLOWS) FROM PARENT DIV'S Y AXIS  MAKE IT HIDDEN*/
+}
+#scroll-div h1{
+    display: inline-block;      /* all h1 will move in block (horizontal)*/
+    font-size: 105px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 3px;
+    /* ANIMATION PART BEGINS HERE  */
+    animation-name: scroll;     
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;        /* this will make animation run infinte time*/
+    animation-timing-function: linear;      /* make animation smooth (jathke se nahi hota*/
+}
+/* COPY AND PASTED TWO TIMES WITH CHANGES OF 20% IN HEIGHT OF EACH DIV */
+#scroll-div2::-webkit-scrollbar{
+    display: none;          /* this whole block of code will remove any scroll bars in this div*/
+}
+#scroll-div2{
+    position: absolute;     /* it'll float (can move anywhere*/
+    top:43%;
+    width:100%;
+    white-space: nowrap;        /*   THIS MAKES THEIR CHILD (MORE H1) BELOW THE H1 (IN VERTICAL LINE)*/
+    overflow-x:auto;        /* IT MEANS IF THE ELEMENT MOVES OUTSIDE THE PARENT'S DIV THE MAKE IT AUTO */
+    overflow-y: hidden;       /* THIS MEANS IF THE ELEMENT MOVES(OVERFLOWS) FROM PARENT DIV'S Y AXIS  MAKE IT HIDDEN*/
+    z-index: 100;           /* must be more than z-index jho img ko di thi jisse ye h1 screen pe dikhe*/
+}
+#scroll-div2 h1{
+    display: inline-block;      /* all h1 will move in block (horizontal)*/
+    font-size: 105px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 3px;
+    color: transparent;         /* made transperent cause text-stroke ke changes dikhne chaiye that;s it*/
+    -webkit-text-stroke-color: black;           /* text-stroke means the outline of the text */
+    -webkit-text-stroke-width: 1.3px;       /* width od text stroke */
+    /* ANIMATION PART BEGINS HERE  */
+    animation-name: scroll_rev;     
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;        /* this will make animation run infinte time*/
+    animation-timing-function: linear;      /* make animation smooth (jathke se nahi hota*/
+}
+#scroll-div3::-webkit-scrollbar{
+    display: none;          /* this whole block of code will remove any scroll bars in this div*/
+}
+#scroll-div3{
+    position: absolute;     /* it'll float (can move anywhere*/
+    top:63%;
+    width:100%;
+    white-space: nowrap;        /*   THIS MAKES THEIR CHILD (MORE H1) BELOW THE H1 (IN VERTICAL LINE)*/
+    overflow-x:auto;        /* IT MEANS IF THE ELEMENT MOVES OUTSIDE THE PARENT'S DIV THE MAKE IT AUTO */
+    overflow-y: hidden;       /* THIS MEANS IF THE ELEMENT MOVES(OVERFLOWS) FROM PARENT DIV'S Y AXIS  MAKE IT HIDDEN*/
+}
+#scroll-div3 h1{
+    display: inline-block;      /* all h1 will move in block (horizontal)*/
+    font-size: 105px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: 3px;
+    /* ANIMATION PART BEGINS HERE  */
+    animation-name: scroll;     
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;        /* this will make animation run infinte time*/
+    animation-timing-function: linear;      /* make animation smooth (jathke se nahi hota*/
+}
+
+/*  ANIMATION PART  */
+/* keyframe keyword hai aur scroll user defined name hai of animation  */
+@keyframes scroll {
+    0%{
+        transform: translateX(calc(-100% - 22px));
+        /* transform karega element ko -100%(full backward aur 20px (of margin-right) bhi minus hoga with every step */
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes scroll_rev{
+    0%{
+        transform: translateX(0);
+        }
+    100%{
+        transform: translateX(calc(-100% - 22px));
+        /* transform karega element ko -100%(full backward aur 20px (of margin-right) bhi minus hoga with every step */
+    
+    }
+}
