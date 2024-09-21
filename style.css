@@ -6,7 +6,7 @@
 }
 
 html,body{
-    width:100%;
+    width:100%; 
     height:100%;
 }
 #main{
@@ -32,7 +32,7 @@ html,body{
 #lower{
     display:flex;   /* aligns items in horizontal direction*/
     position: relative;         /* the child element's position will be releated to this lower div*/
-    background-color: hotpink;
+    background-color: blue;
     min-height:40vh;
     min-width:100vw;        /* vw is view width (used for making responsive*/
 
@@ -70,37 +70,37 @@ html,body{
     padding: 20px;          /* space inside the div (goto page and inspect for daigram*/
 }
 .cone{
-    margin-top: 7px;
+    margin-top: 10px;
     display: flex;
     width: 80%;
-    font-size: 15px;
+    font-size: 2vw 2vh;
     font-style: italic;
 }
 .cone #photo{
     margin-right: 10px;         /*space abve the div */
     margin-top: 5px;
-    width:40px;
-    height: 30px;
+    width:4vw;
+    height: 3vh;
     border-radius: 50%;
     background-color: red;
 }
 #lthreea{
     background-color: rgba(136, 88, 136, 0.822);
     width:100%;
-    height: 30%;
+    height: 35%;
     padding:15px;
 }
 #lthreea p{
-    font-size: 15px;
+    font-size: 2vh;
     margin-top: 5px;
 }
 #lthreeb{
     position:absolute;
     background-image:url(https://www.w3schools.com/css/img_forest.jpg);
     background-size: cover;
-    background-position: 100% 100%;
-    width: 100%;
-    height: 70%;
+    background-position: 50% 70%;
+    width: 23vw;
+    height: 26.05vh;
 }
 #text{
     align-items: center;                /* makes all inside elemnts in center rescpective of height*/
