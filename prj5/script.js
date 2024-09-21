@@ -21,13 +21,16 @@ gsap.to(sec[active-1], {
 mncircles.forEach(function(val, index){
     val.addEventListener("click", function(){
         gsap.to("#circle",{
-            rotate: (3-(index+1))*10
+            rotate: (3-(index+1))*10,
+            ease: Expo.easeInOut,
+            duration: 1.5
         })
         greyout();
         gsap.to(this, {
             opacity: .9
         })
         gsap.to(sec[index], {
+            duration: 2,
             opacity: .9
         })
     })
