@@ -7,18 +7,6 @@ html,body{
     height: 100%;
     width: 100%;
 }
-#nav-div{
-    position: absolute;
-    z-index: 109;
-    display: flex;
-    align-items: center;
-    white-space: NOWRAP;
-    padding: 5px;
-}
-#nav-div h1{
-    font-size: 18px;
-    text-transform: uppercase;
-}
 #main{
     height: 100%;
     width: 100%;
