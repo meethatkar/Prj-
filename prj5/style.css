@@ -1,0 +1,115 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: #794a4a; */
+}
+#circle{
+    border-radius: 50%;  /* isse vho square [width:100vh] vala circle ban jayega */
+    /* These properties set the height and width of the element to 200% of the viewport height. This means that the circle will 
+    be twice as tall and wide as the height of the viewport (the visible area of the browser window). */
+    height:200vh; 
+    width:200vh;        /* widhth 100vh kyu idya hai idk (i only know ki vusse square banana tha isliye diya*/
+    /* background-color: rgb(126, 126, 3); */
+    display: flex;      
+    position: absolute;
+    align-items: center;        /*check karneko is circle ka center part dikh rha hai  ki nahi*/
+    justify-content: center;    /* with the help of test text isliye ye dono ko center kiya hia*/
+    top:50%;            /* verticall center mai align karta hai ye (parent div ko dk=hyan mai rakhke 
+    This positions the top edge of the circle element at the center of its parent container (usually the body element).*/
+    left:-100vh;         /* -75vh andar chala jayega(div ka start part)*/
+    transform: translate(0%,-50%) rotate(100deg); /*This applies a transformation to the circle element, moving it horizontally by 0% (no horizontal movement) 
+    and vertically by -50%. This effectively centers the circle element vertically within its own height, even though it's positioned outside the viewport.
+    */
+    border: 2px solid #dadada ;
+}
+.stripe{
+    position: absolute;
+    transform: translate(0%, -50%);
+    top:50%;        /* top */
+    left:50%;
+    /* above 4 line of code is to bring element in center */
+    /* background-color: cadetblue; */
+    width: 70%;
+    height: 60px;
+    transform-origin: 0% 50%; /* origin ko 0% vertically aur 50% horizontally layega (bargrapg ko yaad mai rakho) */
+    display: flex;      /* so iske ander ke elements freely move ho paye*/
+}
+.str1{
+    transform: translate(0,-50%) rotate(-20deg);
+}
+.str2{
+    transform: translate(0,-50%) rotate(-10deg);
+}
+.str4{
+    transform: translate(0,-50%) rotate(10deg);
+}
+.str5{
+    transform: translate(0,-50%) rotate(20deg);
+}
+/* the above line of code  will build the strokes of circle 
+here they are following the origin as left start(due to line 42)
+ */
+
+ .first{
+    width:71.5%;      /* ye width li hai cause circle ke border se match honi chaiye (sec div mai kuch display karna hai)*/
+    height: 100%;
+    /* background-color: antiquewhite; */
+    position: relative;
+ }
+ .smcircle{
+    width: .5vw;
+    height: .5vw;
+    position: absolute;
+    top: 50%;
+    right: -.27vw;
+    transform: translate(0,-50%);
+    background-color: rgb(171, 171, 171);
+    border-radius: 50%;
+ }
+ .sec{
+    width:28.5%;      /* ye width li hai cause circle ke border se match honi chaiye (sec div mai kuch display karna hai)*/
+    height: 100%;
+    /* background-color: rgb(158, 241, 184); */
+    opacity: .3;
+ }
+ .sec h4{
+    font-size: 3vh;
+    padding-left:15%;
+ }
+ .sec h6{
+    font-size: 1.5vh;
+    font-weight: 600;
+    opacity: .6;
+    padding-left:15%;
+ }
+ #panel{
+    height: 30%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    /* background-color: aquamarine; */
+    right:3%;
+    top:50%;
+    transform: translate(0,-50%);
+
+ }
+ .mncircle{
+    height: 2vh;
+    width: 2vh;
+    background-color: rgb(147, 183, 171);
+    border-radius: 50%;
+    opacity: .3;
+    cursor: pointer;
+ }

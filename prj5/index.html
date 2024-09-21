@@ -1,0 +1,89 @@
+<!-- 
+ STEPS 1: MADE ALL BOILER PLATES
+ STEP 2: DIVING THE WHOLE PAGE INTO DIV (MAIN & CIRCLE) WRITING CSS FOR THE SAME 
+ STEP 3: MAKING STRIPES FOR THAT EK STRIPE BANAYI JISKO CSS APPLY KIYE [YE MAIN STRIPE HAI]
+ STEP 4: MAKING CHILD STRIPE (.STRIPE) , JINKO 10DEG ROTATE KIYA 
+ STEP 5: SAB STRIPE KO  DIVIDE KIYA IN 2 PART (P1 JHO CIRCLE KE ANDER HOGA) (P2 JHO CIRCLE KE BHAR HOGA JIDHAR KUCH DISPLA KARNA HOGA)
+ STEP 6: OUTER STRIPE PE TEXT ADD KIYA WITH CSS
+ STEP 7: MAKING CIRCLE WITH CSS and aliging it on circle border 
+ STEP 8: ADDED SCRIPT.JS LINK AND GSAP CDN (making defualt rotate 100deg to 0deg in 1.5 sec)
+ STEP 9: Adding right pane with mini circle in it with css
+ STEP 10: by default selecting 3rd mncircle and making it highlighted changes in .js and.css file
+ STEP 11: mncircles pe click karne pe vho <h4> element display hona chiaye in center
+ STEP 12: keeping highlighted the selected one and keeping all fade out 
+ STEP 13: making selected text highlighted and remaining fade out -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="circle">
+            <!-- <h1> TEST TEXT </h1> -->
+             <div class="stripe str1">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <H4> Hello Chicago !!</H4>
+                    <h6> I'm Meet From India </h6>
+                </div>
+             </div>
+             <div class="stripe str2">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <H4> Hello Paris !!</H4>
+                    <h6> I'm Meet From India </h6>
+
+                </div>
+             </div>
+             <div class="stripe str3">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <H4> Hello Spain !!</H4>
+                    <h6> I'm Meet From India </h6>
+
+                </div>
+             </div>
+             <div class="stripe str4">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <H4> Hello Egypt !!</H4>
+                    <h6> I'm Meet From India </h6>
+
+                </div>
+             </div>
+             <div class="stripe str5">
+                <div class="first">
+                    <div class="smcircle"></div>
+                </div>
+                <div class="sec">
+                    <H4> Hello Hongkong !!</H4>
+                    <h6> I'm Meet From India </h6>
+
+                </div>
+             </div>
+
+        </div>
+        <div id="panel">
+            <div class="mncircle"></div>
+            <div class="mncircle"></div>
+            <div class="mncircle"></div>
+            <div class="mncircle"></div>
+            <div class="mncircle"></div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="script.js"></script>
+</body>
+</html>
