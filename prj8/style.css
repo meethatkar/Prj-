@@ -1,0 +1,104 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(198, 178, 182, 0.749);
+    display: flex;
+}
+#part1{
+    height: 100%;
+    width: 26%;
+    /* background-color: #C2643D; */
+}
+#part2{
+    height: 100%;
+    width: 64%;
+    /* background-color: #3DC264; */
+    background-image: url(https://images.unsplash.com/photo-1502163140606-888448ae8cfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(190, 165, 171, 0.367); ;
+}
+#part3{
+    height: 100%;
+    width: 10%;
+    /* background-color: #643DC2; */
+}
+#text{
+    position: absolute;
+    top:50%;
+    left:7%;
+    /* background-color: blueviolet; */
+    transform: translate(0%,-50%);
+}
+#text h1{
+    font-size: 90px;
+    font-family:  sans-serif;
+    line-height: 70px;
+    font-weight: 790;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+}
+#small-img{
+    height:400px;
+    width: 300px;
+    background-color: orchid;
+    position: absolute;
+    top:50%;
+    transform: translate(0%,-50%);
+    right:5%;
+    background-image: url(https://images.unsplash.com/photo-1503034446179-71dd75f64208?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: bottom;
+    background-size:400px;
+}
+#vertical-text{
+    transform: rotate(90deg);
+    /* background-color: red; */
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 103%;
+    left: 42%;
+    z-index: 1;
+}
+#vertical-text h1{
+    font-size:70px;
+    font-weight: 750;
+    font-family: sans-serif;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(113, 59, 230, 0.679);
+    letter-spacing: 9px;
+}
+#navbar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    left:7%;
+    top:5%;
+}
+#navbar img{
+    width: 50px;
+    height: 50px;
+}
+#navbar h1{
+    font-size: 10px;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+}
