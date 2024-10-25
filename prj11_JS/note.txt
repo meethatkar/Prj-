@@ -1,0 +1,4 @@
+1. ye pata karo ki mouse rectangle pe aaya ya nahi
+2. ye pata karo mouse rectangle pe hila ya nahi, if hila kidhar hila (left or right).
+3. fir ye pata karo ki agar left mai hai tho kitna left side pe hai refering center point, jitna left mai hoga vutna color ka intensity set karna.
+4. step 3 same, goes for right part too.

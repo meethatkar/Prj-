@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    color:aqua;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+#main h3{
+    left:37.5%;
+    top:69%;
+    position: absolute;
+    font-size: 1.7vw;
+    font-weight: 300;
+}
+#main h4{
+    left:50.5%;
+    top:69%;
+    position: absolute;
+    font-size: 1.7vw;
+    font-weight: 300;
+}
+#main h2{
+    top:23%;
+    left:39.5%;
+    position: absolute;
+    font-size: 1.7vw;
+}
+#main h5{
+    top:27%;
+    left:44%;
+    position: absolute;
+    font-size: .8vw;
+}
+#hint{
+    font-size: 10px;
+    color: rgb(107, 92, 92);
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+#hint button{
+    font-size: 10px;
+    background-color: gray;
+    color: navy;
+}
+h1{
+    height: 100px;
+    width: 100px;
+    /* background-color: #fff; */
+    color: aliceblue;
+    position: absolute;
+    bottom: 4%;
+    right: 1%;
+    font-size: 12px;
+}
+#center{
+    border: 3px dashed blue;
+    height: 250px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
